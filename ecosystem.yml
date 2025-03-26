@@ -1,0 +1,7 @@
+apps:
+  - name: 'nga-news-bot'
+    script: 'dist/index.js'
+    cron: '0 */2 * * *'
+    autorestart: false
+    instances: 1
+    exec_mode: 'fork'

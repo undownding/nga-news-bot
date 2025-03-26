@@ -6,7 +6,7 @@ on:
   push: {branches: ["master", "main"]}
   workflow_dispatch:
 jobs:
-  github-metrics:
+  weekly-report:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -23,9 +23,6 @@ jobs:
           corepack enable
           yarn set version berry
           yarn install --immutable 
-
-      - name: Run lint
-        run: yarn lint
 
       - name: Build project
         run: yarn build

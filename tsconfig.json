@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "target": "esnext",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "tsBuildInfoFile": "./dist/tsconfig.build.tsbuildinfo",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "lib": ["esnext"],
+    "types": ["node"]
+  },
+  "include": [
+    "src/",
+    "test/",
+    "scripts/",
+    "vite.config.ts",
+    "../../AppData/Local/JetBrains/IntelliJIdea2024.3/javascript/typings/node/22.13.13/node_modules/@types/node/globals.d.ts"
+  ]
+}

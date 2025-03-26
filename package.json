@@ -1,0 +1,37 @@
+{
+  "name": "nga-news-bot",
+  "author": "undownding",
+  "private": true,
+  "license": "UNLICENSED",
+  "type": "module",
+  "packageManager": "yarn@4.5.3",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --target=node20 --packages=external --outfile=dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/lodash-es": "^4",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "@typescript-eslint/types": "^8.18.0",
+    "esbuild": "^0.24.2",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "jiti": "^2.4.2",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^8.20.0"
+  },
+  "dependencies": {
+    "@actions/cache": "^4.0.3",
+    "@larksuiteoapi/node-sdk": "^1.45.0",
+    "dotenv": "^16.4.7",
+    "lodash-es": "^4.17.21",
+    "moment": "^2.30.1"
+  }
+}

@@ -6,7 +6,7 @@ import { parseContent } from './item-parser'
 import { decodeHTMLEntities } from './lib'
 import { sendMessage } from './lark'
 
-configDotenv()
+configDotenv({ path: '.env' })
 
 interface LinkResult {
   href: string
@@ -80,7 +80,7 @@ async function main() {
   if (tid && parseInt(tid) > lastTid) {
     console.log(`新情报贴发布，开始爬取`)
     const page = await fetchPage(thread.href)
-    const items = parseContent(page)
+    const items = await parseContent(page)
     await sendMessage(items)
     await cache.saveLastTid(parseInt(tid))
   }
